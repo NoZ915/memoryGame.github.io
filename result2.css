@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+html, body {
+  font-family: "roboto";
+  background-color: #232526;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: solid 5px rgba(255, 255, 255, 0.05);
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.character {
+  width: 110px;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #564659;
+  border-radius: 20px;
+  flex-direction: column;
+}
+.character .eyes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+}
+.character .eye {
+  margin: 5px;
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.character .eyeball {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background-color: #564659;
+}
+.character .mouth {
+  width: 32%;
+  height: 12px;
+  background-color: white;
+  border-radius: 12px;
+  margin-bottom: 15%;
+}
+
+.word {
+  letter-spacing: 1.5px;
+  font-size: 25px;
+}
+
+h3 {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -30%);
+}
+
+.s {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -60%);
+}
+
+.b {
+  position: absolute;
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -65%);
+}
+
+button {
+  position: absolute;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -75%);
+  background-color: #232526;
+  font-family: "roboto";
+  font-weight: 900;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+}
+button:hover {
+  background-color: white;
+  color: black;
+  transition: 0.7s;
+}
+
+@keyframes eyemove {
+  0%,10% {
+    transform: translate(50%);
+  }
+  90%,100% {
+    transform: translate(-50%);
+  }
+}
+.eyeball {
+  animation: eyemove 1.6s infinite alternate;
+}

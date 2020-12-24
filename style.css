@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+html, body {
+  font-family: "roboto";
+  background-color: #232526;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: solid 5px rgba(255, 255, 255, 0.05);
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+html:active, body:active {
+  transition: 0s;
+  border: solid 5px rgba(255, 255, 255, 0.1);
+}
+
+.infos_character_position {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translate(-10%, -50%);
+}
+
+.infos_enemy_position {
+  position: absolute;
+  left: 90%;
+  top: 50%;
+  transform: translate(-90%, -50%);
+}
+
+.infos_status {
+  position: absolute;
+  left: 50%;
+  top: 60px;
+  transform: translateX(-50%);
+  font-size: 30px;
+  color: #FF5353;
+}
+
+.character {
+  width: 110px;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5da53;
+  border-radius: 20px;
+  flex-direction: column;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+.character .eyes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+}
+.character .eye {
+  margin: 5px;
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.character .eyeball {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background-color: #564659;
+}
+.character .mouth {
+  width: 32%;
+  height: 12px;
+  background-color: white;
+  border-radius: 12px;
+  margin-bottom: 15%;
+}
+.character.enemy {
+  background-color: #564659;
+}
+@keyframes eyemove {
+  0%,10% {
+    transform: translate(50%);
+  }
+  90%,100% {
+    transform: translate(-50%);
+  }
+}
+.character .eyeball {
+  animation: eyemove 1.6s infinite alternate;
+}
+
+@keyframes jumping {
+  50% {
+    top: 50%;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    top: 40%;
+    box-shadow: 0px 120px 50px rgba(0, 0, 0, 0.2);
+  }
+}
+.animation {
+  animation: jumping 0.8s infinite alternate;
+}
+
+.blocks {
+  color: white;
+}
+.blocks .row {
+  display: flex;
+}
+.blocks .block {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px white;
+  border-radius: 20px;
+  transition: 0.5s 0.1s;
+  cursor: pointer;
+  margin: 12px;
+}
+.blocks .block:active, .blocks .block.active {
+  transition: 0s;
+  background-color: #fff;
+}
+.blocks .block.block1 {
+  box-shadow: 0px 0px 35px rgba(251, 233, 183, 0.2);
+  background-color: transparent;
+  border: solid 1px #fcf0cf;
+}
+.blocks .block.block1:hover {
+  background-color: rgba(251, 233, 183, 0.3);
+  box-shadow: 0px 0px 35px rgba(251, 233, 183, 0.5);
+}
+.blocks .block.block1:active, .blocks .block.block1.active {
+  background-color: #FBE9B7;
+  box-shadow: 0px 0px 35px #FBE9B7;
+}
+.blocks .block.block2 {
+  box-shadow: 0px 0px 35px rgba(251, 233, 183, 0.2);
+  background-color: transparent;
+  border: solid 1px #fcf0cf;
+}
+.blocks .block.block2:hover {
+  background-color: rgba(251, 233, 183, 0.3);
+  box-shadow: 0px 0px 35px rgba(251, 233, 183, 0.5);
+}
+.blocks .block.block2:active, .blocks .block.block2.active {
+  background-color: #FBE9B7;
+  box-shadow: 0px 0px 35px #FBE9B7;
+}
+.blocks .block.block3 {
+  box-shadow: 0px 0px 35px rgba(251, 233, 183, 0.2);
+  background-color: transparent;
+  border: solid 1px #fcf0cf;
+}
+.blocks .block.block3:hover {
+  background-color: rgba(251, 233, 183, 0.3);
+  box-shadow: 0px 0px 35px rgba(251, 233, 183, 0.5);
+}
+.blocks .block.block3:active, .blocks .block.block3.active {
+  background-color: #FBE9B7;
+  box-shadow: 0px 0px 35px #FBE9B7;
+}
+.blocks .block.block4 {
+  box-shadow: 0px 0px 35px rgba(251, 233, 183, 0.2);
+  background-color: transparent;
+  border: solid 1px #fcf0cf;
+}
+.blocks .block.block4:hover {
+  background-color: rgba(251, 233, 183, 0.3);
+  box-shadow: 0px 0px 35px rgba(251, 233, 183, 0.5);
+}
+.blocks .block.block4:active, .blocks .block.block4.active {
+  background-color: #FBE9B7;
+  box-shadow: 0px 0px 35px #FBE9B7;
+}
+
+.inputStatus {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 15px;
+}
+.inputStatus .circle {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  background-color: white;
+  opacity: 0.3;
+  margin: 5px;
+  border-radius: 100%;
+}
+.inputStatus .circle.correct {
+  opacity: 1;
+}
+.inputStatus.correct .circle {
+  background-color: #5980C1;
+}
+.inputStatus.wrong .circle {
+  background-color: #FF5353;
+}
+
+.pageloading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: #222;
+  color: white;
+  flex-direction: column;
+}
+.pageloading .start {
+  margin: 30px;
+}
+
+button {
+  background-color: #232526;
+  font-family: "roboto";
+  font-weight: 900;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+}
+button:hover {
+  background-color: white;
+  color: black;
+  transition: 0.7s;
+}
+
+.loading {
+  width: 200px;
+  height: 8px;
+  background-color: #564659;
+  margin-top: 80px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.loading .bar {
+  width: 0%;
+  height: 100%;
+  background-color: #f5da53;
+}
+
+.blood {
+  width: 110px;
+  height: 20px;
+  background-color: #d1d0cd;
+  border-radius: 10px;
+  position: absolute;
+  border: 1px solid white;
+}
+.blood.blood_character {
+  left: 10%;
+  top: 65%;
+  transform: translate(-10%, -65%);
+}
+.blood.blood_enemy {
+  left: 90%;
+  top: 65%;
+  transform: translate(-90%, -65%);
+}
+.blood .blood_bar_enemy {
+  width: 100%;
+  height: 100%;
+  background-color: #FF5353;
+  border-radius: 10px;
+}
+.blood .blood_bar_character {
+  width: 100%;
+  height: 100%;
+  background-color: #FF5353;
+  border-radius: 10px;
+}
+
+h5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1.5px;
+  font-weight: 100;
+  font-size: 15px;
+}
+
+.score {
+  position: absolute;
+  left: 50%;
+  top: 3%;
+  transform: translate(-50%, -3%);
+  letter-spacing: 1.5px;
+  font-size: 30px;
+}

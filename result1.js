@@ -1,0 +1,1 @@
+$(".s").text(`YOUR SCORE：${localStorage.getItem('GAME_RESULT')}`)

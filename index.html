@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - 2020專題用（完整）</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h3 class="score" id="score"></h3>
+<div class="infos_status">
+  <h3 class="status"></h3>
+</div>
+<div class="infos_character_position animation">
+  <div class="character" id="color_character">
+    <div class="eyes">
+      <div class="eye">
+        <div class="eyeball"></div>
+      </div>
+      <div class="eye">
+        <div class="eyeball"></div>
+      </div>
+    </div>
+    <div class="mouth"></div>
+  </div>
+</div>
+<div class="blood blood_character">
+  <div class="blood_bar_character" id="blood_bar_character"></div>
+  <h5>POSITIVE</h5>
+</div>
+<div class="blocks">
+  <div class="row">
+    <div class="block block1" onclick="game.userSendInput('1')"></div>
+    <div class="block block2" onclick="game.userSendInput('2')"></div>
+  </div>
+  <div class="row">
+    <div class="block block3" onclick="game.userSendInput('3')"></div>
+    <div class="block block4" onclick="game.userSendInput('4')"></div>
+  </div>
+  <div class="row">
+    <div class="inputStatus"></div>
+  </div>
+</div>
+<div class="infos_enemy_position animation">
+  <div class="character enemy" id="color_enemy">
+    <div class="eyes">
+      <div class="eye">
+        <div class="eyeball"></div>
+      </div>
+      <div class="eye">
+        <div class="eyeball"></div>
+      </div>
+    </div>
+    <div class="mouth"></div>
+  </div>
+</div>
+<div class="blood blood_enemy">
+  <div class="blood_bar_enemy" id="blood_bar_enemy"> </div>
+  <h5>NEGATIVE</h5>
+</div>
+<!--做一個 click to start 的頁面是為了解決 chrome 在沒有使用者互動點擊的情況下不會載入 audio 的問題-->
+<div class="pageloading">
+  <div class="character">
+    <div class="eyes">
+      <div class="eye">
+        <div class="eyeball"></div>
+      </div>
+      <div class="eye">
+        <div class="eyeball"></div>
+      </div>
+    </div>
+    <div class="mouth"></div>
+  </div>
+  <button class="start" onclick="game.clickToStartGame()">Hey！Click Me！</button>
+  <div class="loadingNone">
+    <div class="barNone"></div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
